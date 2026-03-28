@@ -13,11 +13,10 @@ document.querySelector('a[download]').addEventListener('click', function(e) {
 });
 
 const themeToggle = document.getElementById("themeToggle");
-const toggleThumb = document.getElementById("toggleThumb");
 
 function applyTheme(dark) {
   html.classList.toggle("dark", dark);
-  toggleThumb.textContent = dark ? "🌙" : "☀️";
+  themeToggle.classList.toggle("dark-icon", dark);
   localStorage.setItem("theme", dark ? "dark" : "light");
 }
 
